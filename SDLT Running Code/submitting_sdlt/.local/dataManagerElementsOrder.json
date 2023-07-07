@@ -1,0 +1,28 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "out_caseNote_Exist&Flowchart_1",
+        "dt&Sequence_1",
+        "ready&Sequence_10",
+        "important_note_image&Sequence_8",
+        "NewCaseNoRef&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_CaseNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,0 +1,270 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "extracted_datatable&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "connectRDP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "popup_exist&Sequence_1",
+        "Pws&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "openRPM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "casenote_rpm&Sequence_1",
+        "normal_rpm&Sequence_1",
+        "case_note_exist&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "tempFileFolderDeletion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "important_note_folder&Sequence_1",
+        "document_details&Sequence_1",
+        "filter_excel&Sequence_1",
+        "processing_excel&Sequence_1",
+        "report&Sequence_1",
+        "images&Sequence_1",
+        "document_details_exist&Sequence_1",
+        "filter_excel_exist&Sequence_1",
+        "report_exist&Sequence_1",
+        "processing_excel_exist&Sequence_1",
+        "documents&Sequence_1",
+        "document&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "FilterAndGetDetailsAndDocuments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "reportdt&Sequence_1",
+        "Requireddt&Sequence_1",
+        "deleteRow&Sequence_1",
+        "Processingdt&Sequence_1",
+        "excelpath&Sequence_1",
+        "Document_details_dt&Sequence_1",
+        "sdlt&Sequence_1",
+        "exceptional_row_counter&Sequence_1",
+        "case_number&Sequence_1",
+        "execution_dt&Sequence_19",
+        "caseType&Flowchart_1",
+        "document_download_path&Sequence_27",
+        "certified_id_missing&Sequence_27",
+        "contract_missing&Sequence_27",
+        "instruction_form_missing&Sequence_27",
+        "TP1_missing&Sequence_27",
+        "lease_missing&Sequence_27",
+        "cml_missing&Sequence_27",
+        "office_copy_missing&Sequence_27",
+        "statement_missing&Sequence_27",
+        "PrimaryPurchaser&Sequence_27",
+        "PrimaryPurchaserNIN&Sequence_27",
+        "client_name&Sequence_26",
+        "client_NIN_number&Sequence_26",
+        "client_DOB&Sequence_26",
+        "sols_name&Sequence_26",
+        "sols_address&Sequence_26",
+        "sols_ref&Sequence_26",
+        "client_address&Sequence_26",
+        "exchange_date&Sequence_26",
+        "completion_date&Sequence_26",
+        "purchase_price&Sequence_26",
+        "property_address&Sequence_26",
+        "case_note_present&Sequence_26",
+        "client_ind_or_comp&Sequence_26",
+        "PrimaryPurchaser&Sequence_29",
+        "PrimaryPurchaserNIN&Sequence_29",
+        "document_download_path&Sequence_28",
+        "certified_id_missing&Sequence_28",
+        "cml_missing&Sequence_28",
+        "TP1_exception&Sequence_28",
+        "lease_missing&Sequence_28",
+        "office_copy_missing&Sequence_28",
+        "statement_missing&Sequence_28",
+        "contract_missing&Sequence_28",
+        "instruction_form_missing&Sequence_28",
+        "client_name&Sequence_41",
+        "client_NIN_number&Sequence_41",
+        "client_DOB&Sequence_41",
+        "sols_name&Sequence_41",
+        "sols_address&Sequence_41",
+        "sols_ref&Sequence_41",
+        "client_address&Sequence_41",
+        "exchange_date&Sequence_41",
+        "completion_date&Sequence_41",
+        "purchase_price&Sequence_41",
+        "property_address&Sequence_41",
+        "case_note_present&Sequence_41",
+        "client_ind_or_comp&Sequence_41",
+        "certified_id_missing&Sequence_25",
+        "document_download_path&Sequence_25",
+        "PrimaryPurchaser&Sequence_25",
+        "PrimaryPurchaserNIN&Sequence_25",
+        "contract_missing&Sequence_24",
+        "tr1_missing&Sequence_24",
+        "official_copy_missing&Sequence_24",
+        "statement_missing&Sequence_24",
+        "instruction_form_missing&Sequence_24",
+        "client_name&Sequence_40",
+        "client_NIN_number&Sequence_40",
+        "client_DOB&Sequence_40",
+        "sols_name&Sequence_40",
+        "sols_address&Sequence_40",
+        "sols_ref&Sequence_40",
+        "client_address&Sequence_40",
+        "exchange_date&Sequence_40",
+        "completion_date&Sequence_40",
+        "purchase_price&Sequence_40",
+        "property_address&Sequence_40",
+        "case_note_present&Sequence_40",
+        "client_ind_or_comp&Sequence_40"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_excel_path",
+        "out_dt",
+        "In_ToEmail",
+        "In_CCEmail",
+        "argument1"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emailing BACS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "SDLT&Sequence_12",
+        "xlcounter&Sequence_12",
+        "finaldt&Sequence_26",
+        "CaseNumber&Sequence_25",
+        "Status&Sequence_25",
+        "Get_text1&Sequence_10",
+        "outword&Sequence_1",
+        "Get_utrn&Sequence_1",
+        "Word_exist&Sequence_1",
+        "document_exist&Sequence_24",
+        "IsEmailError&Sequence_23",
+        "In_Email&Sequence_23",
+        "Get_text&Sequence_31",
+        "tempdt&Sequence_43",
+        "dt&Sequence_43",
+        "strDT&Sequence_43"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_CaseNumber"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email identifier.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Config_Table&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_ConfigEmail",
+        "In_MappingFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Identify fee earner.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Fee_EarnerName&Sequence_1",
+        "Config_Email&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_Emailid"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Import PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "AdobePDF&Sequence_3",
+        "PDF_Popup&Sequence_4",
+        "SDLT_Submitted&Sequence_4",
+        "InternetExp&Sequence_4",
+        "FolderNo&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Update Share drive.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsExist&Sequence_2",
+        "IsUploaded&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GET_UTRN.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "Get_utrn",
+        "xlcounter"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "searchCaseRef.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ready&Sequence_2",
+        "Update_task&Sequence_2",
+        "If_selectcase&Sequence_2",
+        "ImportantNotepopup&Sequence_13",
+        "important_note_image&Sequence_3",
+        "NewCaseNoRef&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_case_ref",
+        "out_caseNote_Exist",
+        "Get_text"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
