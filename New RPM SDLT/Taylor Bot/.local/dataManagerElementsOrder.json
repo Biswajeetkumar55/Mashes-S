@@ -1,0 +1,162 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Emailing BACS.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "extracted_datatable&Flowchart_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "connectRDP.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Identify fee earner.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Email identifier.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "Out_ConfigEmail",
+        "In_MappingFile"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Import PDF.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "New Bot Comparison.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "FileName&Sequence_3",
+        "dt&Sequence_4",
+        "CmlClient&Sequence_5",
+        "CmlAddress&Sequence_5",
+        "CmlPrice&Sequence_5",
+        "CmlClient&Sequence_30",
+        "CmlAddress&Sequence_30",
+        "CmlPrice&Sequence_30",
+        "CmlClient&Sequence_43",
+        "CmlAddress&Sequence_43",
+        "CmlPrice&Sequence_43",
+        "CmlClient&Sequence_56",
+        "CmlAddress&Sequence_56",
+        "CmlPrice&Sequence_56",
+        "CmlClient&Sequence_69",
+        "CmlAddress&Sequence_69",
+        "CmlPrice&Sequence_69",
+        "CmlClient&Sequence_82",
+        "CmlAddress&Sequence_82",
+        "CmlPrice&Sequence_82"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_PurchasePrice",
+        "In_Address",
+        "In_ClientName"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "GET_UTRN.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "Get_utrn",
+        "xlcounter"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "tempFileFolderDeletion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "important_note_folder&Sequence_1",
+        "document_details&Sequence_1",
+        "filter_excel&Sequence_1",
+        "processing_excel&Sequence_1",
+        "report&Sequence_1",
+        "images&Sequence_1",
+        "document_details_exist&Sequence_1",
+        "filter_excel_exist&Sequence_1",
+        "report_exist&Sequence_1",
+        "processing_excel_exist&Sequence_1",
+        "documents&Sequence_1",
+        "document&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "openRPM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getPropertyDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "popup_exist&Sequence_3",
+        "doesnot_match&Sequence_3",
+        "ready&Sequence_3",
+        "building_name&Sequence_2",
+        "building_number&Sequence_2",
+        "address_1&Sequence_2",
+        "address_2&Sequence_2",
+        "city&Sequence_2",
+        "country&Sequence_2",
+        "postcode&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_exchange_date",
+        "out_completion_date",
+        "out_purchase_price",
+        "out_property_address"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
