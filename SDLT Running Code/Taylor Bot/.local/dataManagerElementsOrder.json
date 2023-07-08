@@ -33,6 +33,8 @@
       "Path": "openRPM.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "exceptionCount&Sequence_19",
+        "Isready&Sequence_19",
         "casenote_rpm&Sequence_1",
         "normal_rpm&Sequence_1",
         "case_note_exist&Sequence_5"
@@ -177,7 +179,14 @@
         "Get_text&Sequence_31",
         "tempdt&Sequence_43",
         "dt&Sequence_43",
-        "strDT&Sequence_43"
+        "strDT&Sequence_43",
+        "AdobePDF&",
+        "PDF_Popup&",
+        "SDLT_Submitted&",
+        "InternetExp&",
+        "FolderNo&",
+        "Isready&",
+        "exceptionCounter&"
       ],
       "ArgumentsSectionElementsOrder": [
         "Out_CaseNumber"
@@ -215,6 +224,24 @@
       "Path": "Import PDF.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "SDLT&",
+        "xlcounter&",
+        "finaldt&",
+        "CaseNumber&",
+        "Status&",
+        "Get_text1&",
+        "outword&",
+        "Get_utrn&",
+        "Word_exist&",
+        "document_exist&",
+        "IsEmailError&",
+        "In_Email&",
+        "Get_text&",
+        "tempdt&",
+        "dt&",
+        "strDT&",
+        "exceptionCounter&Sequence_21",
+        "Isready&Sequence_4",
         "AdobePDF&Sequence_3",
         "PDF_Popup&Sequence_4",
         "SDLT_Submitted&Sequence_4",
@@ -263,6 +290,25 @@
         "out_caseNote_Exist",
         "Get_text"
       ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getTaskReport.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "ExtractDataTable&Sequence_1",
+        "Report_exist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "try.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }
