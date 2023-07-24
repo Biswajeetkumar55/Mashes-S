@@ -164,6 +164,14 @@
       "Path": "Emailing BACS.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "MasterExcelPath&Sequence_43",
+        "desktopPath&Sequence_43",
+        "MonthLastDate&Sequence_55",
+        "TodayDate&Sequence_55",
+        "Exception_counter&Sequence_48",
+        "Ready_exist&Sequence_48",
+        "Ready_exist&Sequence_47",
+        "Exception_counter&Sequence_47",
         "SDLT&Sequence_12",
         "xlcounter&Sequence_12",
         "finaldt&Sequence_26",
@@ -179,14 +187,7 @@
         "Get_text&Sequence_31",
         "tempdt&Sequence_43",
         "dt&Sequence_43",
-        "strDT&Sequence_43",
-        "AdobePDF&",
-        "PDF_Popup&",
-        "SDLT_Submitted&",
-        "InternetExp&",
-        "FolderNo&",
-        "Isready&",
-        "exceptionCounter&"
+        "strDT&Sequence_43"
       ],
       "ArgumentsSectionElementsOrder": [
         "Out_CaseNumber"
@@ -224,22 +225,6 @@
       "Path": "Import PDF.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
-        "SDLT&",
-        "xlcounter&",
-        "finaldt&",
-        "CaseNumber&",
-        "Status&",
-        "Get_text1&",
-        "outword&",
-        "Get_utrn&",
-        "Word_exist&",
-        "document_exist&",
-        "IsEmailError&",
-        "In_Email&",
-        "Get_text&",
-        "tempdt&",
-        "dt&",
-        "strDT&",
         "exceptionCounter&Sequence_21",
         "Isready&Sequence_4",
         "AdobePDF&Sequence_3",
@@ -307,8 +292,124 @@
     {
       "Path": "try.xaml",
       "SortBy": 0,
-      "VariablesSectionElementsOrder": [],
+      "VariablesSectionElementsOrder": [
+        "TodayDate&Sequence_11",
+        "MonthLastDate&Sequence_11",
+        "dt&Sequence_5",
+        "desktopPath&Sequence_5",
+        "MasterExcelPath&Sequence_5"
+      ],
       "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "navigateDocument.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "document_window_exist&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getClientDetailsRPM.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "IsMorethan1Client&Sequence_1",
+        "Is1Client&Sequence_1",
+        "PersonalSelector&Sequence_1",
+        "popup_exist&Sequence_2",
+        "building_name&Sequence_2",
+        "building_number&Sequence_2",
+        "address_1&Sequence_2",
+        "address_2&Sequence_2",
+        "city&Sequence_2",
+        "country&Sequence_2",
+        "postcode&Sequence_2",
+        "correct_form&Sequence_2",
+        "Id&Sequence_2",
+        "PrimaryPurchaser&Sequence_2",
+        "test&Sequence_2",
+        "files&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_client_name",
+        "out_client_NIN",
+        "out_client_address",
+        "out_DOB",
+        "out_client_individual_company",
+        "Out_PrimaryPurchaser",
+        "Out_PrimaryNINNumber",
+        "In_BuildingNumber",
+        "In_BuildingName",
+        "In_Address1",
+        "In_Address2",
+        "In_ClientCity",
+        "In_ClientPostcode",
+        "In_ClientCountry",
+        "In_ClientDOB"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Primary Purchaser.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "names&Sequence_1",
+        "indx&Sequence_1",
+        "NInumber&Sequence_2",
+        "postcode&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "PrimaryPurchaser",
+        "Primary_NINNumber",
+        "In_DOB",
+        "Out_building_name",
+        "Out_BuildingNumber",
+        "Out_Address1",
+        "Out_Address2",
+        "Out_City",
+        "Out_Country",
+        "Out_PostCode"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "test.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "OldFile&Sequence_1",
+        "NewFile&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "getPropertyDetails.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "popup_exist&Sequence_3",
+        "doesnot_match&Sequence_3",
+        "ready&Sequence_3",
+        "building_name&Sequence_2",
+        "building_number&Sequence_2",
+        "address_1&Sequence_2",
+        "address_2&Sequence_2",
+        "city&Sequence_2",
+        "country&Sequence_2",
+        "postcode&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "out_exchange_date",
+        "out_completion_date",
+        "out_purchase_price",
+        "out_property_address"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

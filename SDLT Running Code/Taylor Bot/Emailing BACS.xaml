@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>2638,10846</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1824,4163</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Emailing_BACS_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="84">
@@ -52,6 +52,8 @@
       <x:String>System.Xml.Serialization</x:String>
       <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.Mail.Outlook.Activities</x:String>
+      <x:String>UiPath.Mail.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -96,10 +98,12 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="2648,10701" sap2010:WorkflowViewState.IdRef="Sequence_12">
+  <Sequence sap:VirtualizedContainerService.HintSize="1834,4098" sap2010:WorkflowViewState.IdRef="Sequence_12">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="SDLT" />
       <Variable x:TypeArguments="x:Int32" Name="xlcounter" />
@@ -109,13 +113,13 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="2586,10067" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="E:\Taylors\Excel Comparision\comparison\Final.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1772,2274" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="E:\Taylors\Excel Comparision\comparison\Final.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="2552,9957" sap2010:WorkflowViewState.IdRef="Sequence_26">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1738,2164" sap2010:WorkflowViewState.IdRef="Sequence_26">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="finaldt" />
             </Sequence.Variables>
@@ -124,14 +128,14 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[finaldt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="2490,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[finaldt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1676,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
                 </InArgument>
               </ui:ExcelReadRange.Range>
             </ui:ExcelReadRange>
-            <Assign sap:VirtualizedContainerService.HintSize="2490,82" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign sap:VirtualizedContainerService.HintSize="1676,82" sap2010:WorkflowViewState.IdRef="Assign_10">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[xlcounter]</OutArgument>
               </Assign.To>
@@ -139,19 +143,19 @@
                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[finaldt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="2490,9624" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[finaldt]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="1676,1831" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
-                  <Sequence sap:VirtualizedContainerService.HintSize="2440,9476" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                  <Sequence sap:VirtualizedContainerService.HintSize="1626,1683" sap2010:WorkflowViewState.IdRef="Sequence_36">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="2378,9365" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1564,1572" sap2010:WorkflowViewState.IdRef="Sequence_25">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="CaseNumber" />
                         <Variable x:TypeArguments="x:String" Name="Status" />
@@ -161,7 +165,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="2316,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                      <Assign sap:VirtualizedContainerService.HintSize="1502,82" sap2010:WorkflowViewState.IdRef="Assign_1">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[Out_CaseNumber]</OutArgument>
                         </Assign.To>
@@ -169,7 +173,7 @@
                           <InArgument x:TypeArguments="x:String">[row("Insight Ref").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="2316,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      <Assign sap:VirtualizedContainerService.HintSize="1502,82" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[Status]</OutArgument>
                         </Assign.To>
@@ -177,7 +181,7 @@
                           <InArgument x:TypeArguments="x:String">[row("Submit SDLT Staus").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="2316,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <Assign sap:VirtualizedContainerService.HintSize="1502,82" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[SDLT]</OutArgument>
                         </Assign.To>
@@ -185,7 +189,7 @@
                           <InArgument x:TypeArguments="x:String">[row("SDLT stamp Duty").ToString]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="2316,82" sap2010:WorkflowViewState.IdRef="Assign_9">
+                      <Assign sap:VirtualizedContainerService.HintSize="1502,82" sap2010:WorkflowViewState.IdRef="Assign_9">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:Int32">[xlcounter]</OutArgument>
                         </Assign.To>
@@ -193,11 +197,11 @@
                           <InArgument x:TypeArguments="x:Int32">[xlcounter+1]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <If Condition="[Not String.IsNullOrEmpty(Status)]" sap:VirtualizedContainerService.HintSize="2316,8393" sap2010:WorkflowViewState.IdRef="If_3">
+                      <If Condition="[Not String.IsNullOrEmpty(Status)]" sap:VirtualizedContainerService.HintSize="1502,600" sap2010:WorkflowViewState.IdRef="If_3">
                         <If.Then>
-                          <If Condition="[Status.ToUpper.Contains(&quot;SDLT SUBMITTED&quot;)]" sap:VirtualizedContainerService.HintSize="1821,8235" sap2010:WorkflowViewState.IdRef="If_4">
+                          <If Condition="[Status.ToUpper.Contains(&quot;SDLT SUBMITTED&quot;)]" sap:VirtualizedContainerService.HintSize="1007,442" sap2010:WorkflowViewState.IdRef="If_4">
                             <If.Then>
-                              <Sequence sap:VirtualizedContainerService.HintSize="1326,8077" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                              <Sequence sap:VirtualizedContainerService.HintSize="512,284" sap2010:WorkflowViewState.IdRef="Sequence_10">
                                 <Sequence.Variables>
                                   <Variable x:TypeArguments="x:String" Name="Get_text1" />
                                 </Sequence.Variables>
@@ -207,7 +211,7 @@
                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Emailing_BACS" sap:VirtualizedContainerService.HintSize="1264,2511" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                                <Sequence DisplayName="Emailing_BACS" sap:VirtualizedContainerService.HintSize="450,81" sap2010:WorkflowViewState.IdRef="Sequence_1">
                                   <Sequence.Variables>
                                     <Variable x:TypeArguments="ui:Window" Name="outword" />
                                     <Variable x:TypeArguments="x:String" Name="Get_utrn" />
@@ -215,7 +219,7 @@
                                   </Sequence.Variables>
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -237,7 +241,7 @@
                                       <scg:Dictionary x:TypeArguments="x:String, Argument" />
                                     </ui:InvokeWorkflowFile.Arguments>
                                   </ui:InvokeWorkflowFile>
-                                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'redbrickpm.exe S459/449...'" sap:VirtualizedContainerService.HintSize="534,52" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="6910acd5383f61bcf2bdae7bc41841b9" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;">
+                                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'redbrickpm.exe S459/449...'" sap:VirtualizedContainerService.HintSize="534,365" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="6910acd5383f61bcf2bdae7bc41841b9" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;">
                                     <ui:WindowScope.Body>
                                       <ActivityAction x:TypeArguments="x:Object">
                                         <ActivityAction.Argument>
@@ -276,7 +280,7 @@
                                     </ui:WindowScope.Body>
                                     <sap:WorkflowViewStateService.ViewState>
                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                       </scg:Dictionary>
                                     </sap:WorkflowViewStateService.ViewState>
@@ -683,30 +687,31 @@
                                     </sap:WorkflowViewStateService.ViewState>
                                   </ui:CommentOut>
                                 </Sequence>
-                                <If Condition="[SDLT = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="1264,5415" sap2010:WorkflowViewState.IdRef="If_6">
+                                <If Condition="[SDLT = &quot;0&quot;]" sap:VirtualizedContainerService.HintSize="450,52" sap2010:WorkflowViewState.IdRef="If_6">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <If.Else>
-                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'redbrickpm.exe S459/422...'" sap:VirtualizedContainerService.HintSize="1119,5257" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="3f69d7b2fcbd4d20c224d3f58227f9c1" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;">
+                                    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'redbrickpm.exe S459/422...'" sap:VirtualizedContainerService.HintSize="678,3848" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="3f69d7b2fcbd4d20c224d3f58227f9c1" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='MainForm' /&gt;">
                                       <ui:WindowScope.Body>
                                         <ActivityAction x:TypeArguments="x:Object">
                                           <ActivityAction.Argument>
                                             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                           </ActivityAction.Argument>
-                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1085,5110" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="644,3701" sap2010:WorkflowViewState.IdRef="Sequence_24">
                                             <Sequence.Variables>
                                               <Variable x:TypeArguments="x:Boolean" Name="document_exist" />
                                             </Sequence.Variables>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="1023,135" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="All">
+                                            <ui:SelectItem AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Select Item 'combo box'" sap:VirtualizedContainerService.HintSize="582,135" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="All">
                                               <ui:SelectItem.Items>
                                                 <scg:List x:TypeArguments="x:String" Capacity="50">
                                                   <x:String>All</x:String>
@@ -772,7 +777,7 @@
                                                 </ui:Target>
                                               </ui:SelectItem.Target>
                                             </ui:SelectItem>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell Subject'" sap:VirtualizedContainerService.HintSize="1023,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell Subject'" sap:VirtualizedContainerService.HintSize="582,107" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                                               <ui:Click.CursorPosition>
                                                 <ui:CursorPosition Position="Center">
                                                   <ui:CursorPosition.OffsetX>
@@ -794,7 +799,7 @@
                                                 </ui:Target>
                                               </ui:Click.Target>
                                             </ui:Click>
-                                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'cell Subject'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1023,135" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="SDLT Payment Form">
+                                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'cell Subject'" EmptyField="True" sap:VirtualizedContainerService.HintSize="582,135" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="SDLT Payment Form">
                                               <ui:TypeInto.Target>
                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6e052a25-d31f-4227-9912-10ce4922e454" InformativeScreenshot="b04357556eb042fc598777566fd8346c" Selector="&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panel4' /&gt;&lt;wnd ctrlname='bodyPanel' /&gt;&lt;wnd ctrlname='CorrespondenceControl' /&gt;&lt;wnd ctrlname='scSplit' /&gt;&lt;wnd ctrlname='grid' /&gt;&lt;ctrl name='Filter Row' role='row' /&gt;&lt;ctrl name='Subject row -999997' role='cell' /&gt;">
                                                   <ui:Target.TimeoutMS>
@@ -806,7 +811,7 @@
                                                 </ui:Target>
                                               </ui:TypeInto.Target>
                                             </ui:TypeInto>
-                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell  Subject row 0'" sap:VirtualizedContainerService.HintSize="1023,107" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell  Subject row 0'" sap:VirtualizedContainerService.HintSize="582,107" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
                                               <ui:Click.CursorPosition>
                                                 <ui:CursorPosition Position="Center">
                                                   <ui:CursorPosition.OffsetX>
@@ -828,7 +833,7 @@
                                                 </ui:Target>
                                               </ui:Click.Target>
                                             </ui:Click>
-                                            <ui:UiElementExists DisplayName="Element Exists 'cell  Subject row 0'" Exists="[document_exist]" sap:VirtualizedContainerService.HintSize="1023,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                                            <ui:UiElementExists DisplayName="Element Exists 'cell  Subject row 0'" Exists="[document_exist]" sap:VirtualizedContainerService.HintSize="582,107" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                                               <ui:UiElementExists.Target>
                                                 <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c5dff1f-aae5-4af6-84d5-6c6123bb8abd" InformativeScreenshot="19985e07f58d23d361f9d283cdd07ff2" Selector="&lt;wnd ctrlname='toolStripContainer' /&gt;&lt;wnd ctrlname='paneSplitter' /&gt;&lt;wnd ctrlname='toolStripContainer1' /&gt;&lt;wnd ctrlname='panel3' /&gt;&lt;wnd ctrlname='panel4' /&gt;&lt;wnd ctrlname='bodyPanel' /&gt;&lt;wnd ctrlname='CorrespondenceControl' /&gt;&lt;wnd ctrlname='scSplit' /&gt;&lt;wnd ctrlname='grid' /&gt;&lt;ctrl name='Row 1' role='row' /&gt;&lt;ctrl name='Subject row 0' role='cell' /&gt;" TimeoutMS="500">
                                                   <ui:Target.WaitForReady>
@@ -837,7 +842,7 @@
                                                 </ui:Target>
                                               </ui:UiElementExists.Target>
                                             </ui:UiElementExists>
-                                            <If Condition="[document_exist]" sap:VirtualizedContainerService.HintSize="1023,4208" sap2010:WorkflowViewState.IdRef="If_2">
+                                            <If Condition="[document_exist]" sap:VirtualizedContainerService.HintSize="582,2799" sap2010:WorkflowViewState.IdRef="If_2">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -845,7 +850,7 @@
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
                                               <If.Then>
-                                                <Sequence sap:VirtualizedContainerService.HintSize="987,4021" sap2010:WorkflowViewState.IdRef="Sequence_23">
+                                                <Sequence sap:VirtualizedContainerService.HintSize="546,2612" sap2010:WorkflowViewState.IdRef="Sequence_23">
                                                   <Sequence.Variables>
                                                     <Variable x:TypeArguments="x:Boolean" Name="IsEmailError" />
                                                     <Variable x:TypeArguments="x:String" Name="In_Email" />
@@ -856,7 +861,7 @@
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell  Subject row 0'" sap:VirtualizedContainerService.HintSize="925,107" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_RIGHT">
+                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'cell  Subject row 0'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_RIGHT">
                                                     <ui:Click.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -878,7 +883,7 @@
                                                       </ui:Target>
                                                     </ui:Click.Target>
                                                   </ui:Click>
-                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="925,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'client  Data Panel'" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                     <ui:Click.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -890,17 +895,50 @@
                                                       </ui:CursorPosition>
                                                     </ui:Click.CursorPosition>
                                                     <ui:Click.Target>
-                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="96201bb9-9732-45e8-85ec-1925f2367736" InformativeScreenshot="e382e670e6f3c8c4a0ba18727f8ecaa1" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&#xA;&lt;wnd aaname='DropDown' app='redbrickpm.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;&#xA;&lt;ctrl name='DropDown' role='popup menu' /&gt;&#xA;&lt;ctrl name='Email As PDF Document To' role='menu item' /&gt;&#xA;">
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="96201bb9-9732-45e8-85ec-1925f2367736" InformativeScreenshot="e382e670e6f3c8c4a0ba18727f8ecaa1" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&#xA;&lt;wnd aaname='DropDown' app='redbrickpm.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;&#xA;&lt;ctrl name='DropDown' role='popup menu' /&gt;&#xA;&lt;ctrl name='Email As PDF Document To' role='menu item' /&gt;&#xA;" WaitForReady="COMPLETE">
                                                         <ui:Target.TimeoutMS>
                                                           <InArgument x:TypeArguments="x:Int32" />
                                                         </ui:Target.TimeoutMS>
-                                                        <ui:Target.WaitForReady>
-                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                        </ui:Target.WaitForReady>
                                                       </ui:Target>
                                                     </ui:Click.Target>
                                                   </ui:Click>
-                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="925,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+                                                    <ui:CommentOut.Body>
+                                                      <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_50">
+                                                        <sap:WorkflowViewStateService.ViewState>
+                                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                          </scg:Dictionary>
+                                                        </sap:WorkflowViewStateService.ViewState>
+                                                        <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1500" DisplayName="Click 'menu item'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                          <ui:Click.CursorPosition>
+                                                            <ui:CursorPosition Position="Center">
+                                                              <ui:CursorPosition.OffsetX>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetX>
+                                                              <ui:CursorPosition.OffsetY>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:CursorPosition.OffsetY>
+                                                            </ui:CursorPosition>
+                                                          </ui:Click.CursorPosition>
+                                                          <ui:Click.Target>
+                                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1fc9f3a8-0802-4b25-9da3-7c6cc61fe95d" InformativeScreenshot="e6f7aa9c3f3a174afb017cbfeeafebb4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd aaname='DropDown' app='redbrickpm.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;&lt;ctrl name='Other/Multiple Parties...' role='menu item' /&gt;" WaitForReady="COMPLETE">
+                                                              <ui:Target.TimeoutMS>
+                                                                <InArgument x:TypeArguments="x:Int32" />
+                                                              </ui:Target.TimeoutMS>
+                                                            </ui:Target>
+                                                          </ui:Click.Target>
+                                                        </ui:Click>
+                                                      </Sequence>
+                                                    </ui:CommentOut.Body>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                  </ui:CommentOut>
+                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1500" DisplayName="Click | Other Parties" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_26" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                     <ui:Click.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -912,22 +950,74 @@
                                                       </ui:CursorPosition>
                                                     </ui:Click.CursorPosition>
                                                     <ui:Click.Target>
-                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1fc9f3a8-0802-4b25-9da3-7c6cc61fe95d" InformativeScreenshot="43ab737643e97e66726370b58eb1bbe4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd aaname='Email As PDF Document ToDropDown' app='redbrickpm.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;&lt;ctrl name='Other/Multiple Parties...' role='menu item' omit:aastate='focused, hot tracked, focusable' /&gt;">
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1fc9f3a8-0802-4b25-9da3-7c6cc61fe95d" InformativeScreenshot="e6f7aa9c3f3a174afb017cbfeeafebb4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd aaname='DropDown' app='redbrickpm.exe' cls='WindowsForms10.Window.*' idx='*' /&gt;&lt;ctrl name='Other/Multiple Parties*' role='menu item' /&gt;" WaitForReady="COMPLETE">
                                                         <ui:Target.TimeoutMS>
                                                           <InArgument x:TypeArguments="x:Int32" />
                                                         </ui:Target.TimeoutMS>
-                                                        <ui:Target.WaitForReady>
-                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                        </ui:Target.WaitForReady>
                                                       </ui:Target>
                                                     </ui:Click.Target>
                                                   </ui:Click>
-                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Identify fee earner workflow" sap:VirtualizedContainerService.HintSize="925,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Identify fee earner.xaml">
+                                                  <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Identify fee earner workflow" sap:VirtualizedContainerService.HintSize="484,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Identify fee earner.xaml">
                                                     <ui:InvokeWorkflowFile.Arguments>
                                                       <OutArgument x:TypeArguments="x:String" x:Key="Out_Emailid">[In_Email]</OutArgument>
                                                     </ui:InvokeWorkflowFile.Arguments>
                                                   </ui:InvokeWorkflowFile>
-                                                  <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="On Element Appear 'redbrickpm.exe  Email'" sap:VirtualizedContainerService.HintSize="925,395" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="False" WaitVisible="True">
+                                                  <Sequence DisplayName="Wait for ready" sap:VirtualizedContainerService.HintSize="484,81" sap2010:WorkflowViewState.IdRef="Sequence_47">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:Int32" Name="Exception_counter" />
+                                                      <Variable x:TypeArguments="x:Boolean" Name="Ready_exist" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:UiElementExists DisplayName="Element Exists | Ready" Exists="[Ready_exist]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_4">
+                                                      <ui:UiElementExists.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9896749b-e26f-4533-ac0d-98231459e67f" InformativeScreenshot="c932a3aea4a0989b0ffcf2779f74f116" Selector="&lt;wnd ctrlname='statusBar' /&gt;&lt;ctrl name='Ready' role='text' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                                                      </ui:UiElementExists.Target>
+                                                    </ui:UiElementExists>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_11">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">[Exception_counter]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <ui:InterruptibleWhile Condition="[Not Ready_exist and Exception_counter&lt;10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_2">
+                                                      <ui:InterruptibleWhile.Body>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,340" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_12">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Int32">[Exception_counter]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Int32">[Exception_counter+1]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <ui:UiElementExists DisplayName="Element Exists | Ready" Exists="[Ready_exist]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+                                                            <ui:UiElementExists.Target>
+                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9896749b-e26f-4533-ac0d-98231459e67f" InformativeScreenshot="c932a3aea4a0989b0ffcf2779f74f116" Selector="&lt;wnd ctrlname='statusBar' /&gt;&lt;ctrl name='Ready' role='text' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                                                            </ui:UiElementExists.Target>
+                                                          </ui:UiElementExists>
+                                                        </Sequence>
+                                                      </ui:InterruptibleWhile.Body>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:InterruptibleWhile>
+                                                  </Sequence>
+                                                  <ui:OnUiElementAppear ContinueOnError="{x:Null}" FoundElement="{x:Null}" WaitActive="{x:Null}" DisplayName="On Element Appear 'redbrickpm.exe  Email'" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_1" RepeatForever="False" WaitVisible="True">
                                                     <ui:OnUiElementAppear.Body>
                                                       <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_16">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -971,12 +1061,12 @@
                                                     </ui:OnUiElementAppear.Target>
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:OnUiElementAppear>
-                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="925,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="CommentOut_7">
                                                     <ui:CommentOut.Body>
                                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="608,469" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -1004,7 +1094,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:CommentOut>
-                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into | To Email" sap:VirtualizedContainerService.HintSize="925,135" sap2010:WorkflowViewState.IdRef="TypeInto_14" Text="[In_Email]">
+                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into | To Email" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_14" Text="[In_Email]">
                                                     <ui:TypeInto.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2bdaa937-3284-4349-be59-f6860212de5f" InformativeScreenshot="b782b00b3fba1d4f23a1229cda5511a4" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='EmailSelection' /&gt;&lt;wnd ctrlname='txtTo' /&gt;&lt;wnd ctrlname='tbAddresses' /&gt;">
                                                         <ui:Target.TimeoutMS>
@@ -1016,7 +1106,7 @@
                                                       </ui:Target>
                                                     </ui:TypeInto.Target>
                                                   </ui:TypeInto>
-                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="925,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="CommentOut_8">
                                                     <ui:CommentOut.Body>
                                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_41">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -1045,7 +1135,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:CommentOut>
-                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into | CC" sap:VirtualizedContainerService.HintSize="925,135" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="prashantmaharaj@anzaservicesllp.com">
+                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into | CC" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_13" Text="prashantmaharaj@anzaservicesllp.com">
                                                     <ui:TypeInto.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="45624113-6c30-4928-ad17-558223394dc9" InformativeScreenshot="f410fbede16af5105ceb0d1941e22140" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='EmailSelection' /&gt;&lt;wnd ctrlname='txtCc' /&gt;&lt;wnd ctrlname='tbAddresses' /&gt;">
                                                         <ui:Target.TimeoutMS>
@@ -1057,7 +1147,7 @@
                                                       </ui:Target>
                                                     </ui:TypeInto.Target>
                                                   </ui:TypeInto>
-                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into | Subject" EmptyField="True" sap:VirtualizedContainerService.HintSize="925,135" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[&quot;SDLT Payment Form for case no &quot; + Out_CaseNumber]">
+                                                  <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DisplayName="Type Into | Subject" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,135" sap2010:WorkflowViewState.IdRef="TypeInto_9" Text="[&quot;SDLT Payment Form for case no &quot; + Out_CaseNumber]">
                                                     <ui:TypeInto.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c802b7ba-4b3c-4f82-b63d-e84c4b676807" InformativeScreenshot="441897d8a5304b3733fefb6122f13573" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='EmailSelection' /&gt;&lt;wnd ctrlname='txtSubject' /&gt;">
                                                         <ui:Target.TimeoutMS>
@@ -1069,8 +1159,8 @@
                                                       </ui:Target>
                                                     </ui:TypeInto.Target>
                                                   </ui:TypeInto>
-                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="925,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Check&quot;]" />
-                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="925,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Check&quot;]" />
+                                                  <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                                                     <ui:CommentOut.Body>
                                                       <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,246" sap2010:WorkflowViewState.IdRef="Sequence_27">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -1099,7 +1189,7 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:CommentOut>
-                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click | Create message" sap:VirtualizedContainerService.HintSize="925,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                  <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click | Create message" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                     <ui:Click.CursorPosition>
                                                       <ui:CursorPosition Position="Center">
                                                         <ui:CursorPosition.OffsetX>
@@ -1121,7 +1211,62 @@
                                                       </ui:Target>
                                                     </ui:Click.Target>
                                                   </ui:Click>
-                                                  <ui:OnUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'redbrickpm.exe Email'" sap:VirtualizedContainerService.HintSize="925,52" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_2" RepeatForever="False" WaitVisible="True">
+                                                  <Sequence DisplayName="Wait for ready" sap:VirtualizedContainerService.HintSize="484,81" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                                    <Sequence.Variables>
+                                                      <Variable x:TypeArguments="x:Int32" Name="Exception_counter" />
+                                                      <Variable x:TypeArguments="x:Boolean" Name="Ready_exist" />
+                                                    </Sequence.Variables>
+                                                    <sap:WorkflowViewStateService.ViewState>
+                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                      </scg:Dictionary>
+                                                    </sap:WorkflowViewStateService.ViewState>
+                                                    <ui:UiElementExists DisplayName="Element Exists | Ready" Exists="[Ready_exist]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
+                                                      <ui:UiElementExists.Target>
+                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9896749b-e26f-4533-ac0d-98231459e67f" InformativeScreenshot="c932a3aea4a0989b0ffcf2779f74f116" Selector="&lt;wnd ctrlname='statusBar' /&gt;&lt;ctrl name='Ready' role='text' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                                                      </ui:UiElementExists.Target>
+                                                    </ui:UiElementExists>
+                                                    <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_13">
+                                                      <Assign.To>
+                                                        <OutArgument x:TypeArguments="x:Int32">[Exception_counter]</OutArgument>
+                                                      </Assign.To>
+                                                      <Assign.Value>
+                                                        <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                                                      </Assign.Value>
+                                                    </Assign>
+                                                    <ui:InterruptibleWhile Condition="[Not Ready_exist and Exception_counter&lt;10]" DisplayName="While" sap:VirtualizedContainerService.HintSize="434,52" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_3">
+                                                      <ui:InterruptibleWhile.Body>
+                                                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,340" sap2010:WorkflowViewState.IdRef="Sequence_49">
+                                                          <sap:WorkflowViewStateService.ViewState>
+                                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                            </scg:Dictionary>
+                                                          </sap:WorkflowViewStateService.ViewState>
+                                                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                            <Assign.To>
+                                                              <OutArgument x:TypeArguments="x:Int32">[Exception_counter]</OutArgument>
+                                                            </Assign.To>
+                                                            <Assign.Value>
+                                                              <InArgument x:TypeArguments="x:Int32">[Exception_counter+1]</InArgument>
+                                                            </Assign.Value>
+                                                          </Assign>
+                                                          <ui:UiElementExists DisplayName="Element Exists | Ready" Exists="[Ready_exist]" sap:VirtualizedContainerService.HintSize="434,107" sap2010:WorkflowViewState.IdRef="UiElementExists_7">
+                                                            <ui:UiElementExists.Target>
+                                                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9896749b-e26f-4533-ac0d-98231459e67f" InformativeScreenshot="c932a3aea4a0989b0ffcf2779f74f116" Selector="&lt;wnd ctrlname='statusBar' /&gt;&lt;ctrl name='Ready' role='text' /&gt;" TimeoutMS="5000" WaitForReady="COMPLETE" />
+                                                            </ui:UiElementExists.Target>
+                                                          </ui:UiElementExists>
+                                                        </Sequence>
+                                                      </ui:InterruptibleWhile.Body>
+                                                      <sap:WorkflowViewStateService.ViewState>
+                                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                        </scg:Dictionary>
+                                                      </sap:WorkflowViewStateService.ViewState>
+                                                    </ui:InterruptibleWhile>
+                                                  </Sequence>
+                                                  <ui:OnUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" ContinueOnError="True" DisplayName="On Element Appear 'redbrickpm.exe Email'" sap:VirtualizedContainerService.HintSize="484,52" sap2010:WorkflowViewState.IdRef="OnUiElementAppear_2" RepeatForever="False" WaitVisible="True">
                                                     <ui:OnUiElementAppear.Body>
                                                       <Sequence sap:VirtualizedContainerService.HintSize="512,329" sap2010:WorkflowViewState.IdRef="Sequence_18">
                                                         <sap:WorkflowViewStateService.ViewState>
@@ -1159,13 +1304,10 @@
                                                       </Sequence>
                                                     </ui:OnUiElementAppear.Body>
                                                     <ui:OnUiElementAppear.Target>
-                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d2497af-e7bd-4b4c-a9fb-fed392f05d65" InformativeScreenshot="471457c0a66733bfb742d1c55d162e81" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='EmailTrackingDeclinedWarning' /&gt;&lt;ctrl name='Email Tracking Warning' role='client' /&gt;">
+                                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d2497af-e7bd-4b4c-a9fb-fed392f05d65" InformativeScreenshot="471457c0a66733bfb742d1c55d162e81" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' ctrlname='EmailTrackingDeclinedWarning' /&gt;&lt;ctrl name='Email Tracking Warning' role='client' /&gt;" WaitForReady="COMPLETE">
                                                         <ui:Target.TimeoutMS>
                                                           <InArgument x:TypeArguments="x:Int32" />
                                                         </ui:Target.TimeoutMS>
-                                                        <ui:Target.WaitForReady>
-                                                          <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                        </ui:Target.WaitForReady>
                                                       </ui:Target>
                                                     </ui:OnUiElementAppear.Target>
                                                     <sap:WorkflowViewStateService.ViewState>
@@ -1175,8 +1317,8 @@
                                                       </scg:Dictionary>
                                                     </sap:WorkflowViewStateService.ViewState>
                                                   </ui:OnUiElementAppear>
-                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="925,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Check for extra popup&quot;]" />
-                                                  <ui:UiElementExists DisplayName="Element Exists 'redbrickpm.exe  Error'" Exists="[IsEmailError]" sap:VirtualizedContainerService.HintSize="925,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                                                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Check for extra popup&quot;]" />
+                                                  <ui:UiElementExists DisplayName="Element Exists 'redbrickpm.exe  Error'" Exists="[IsEmailError]" sap:VirtualizedContainerService.HintSize="484,107" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                                                     <ui:UiElementExists.Target>
                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="63b39da2-67d7-4576-bb50-25877811f3ee" InformativeScreenshot="f79fc154c1b0664a8e2148b71f6abaf3" Selector="&lt;rdp app='mstsc.exe' cls='TscShellContainerClass' title='Taylor BOT - 10.1.7.8 - Remote Desktop Connection' /&gt;&lt;wnd app='redbrickpm.exe' cls='#32770' title='Error' aastate='moveable, focusable' /&gt;" TimeoutMS="5000">
                                                         <ui:Target.WaitForReady>
@@ -1185,10 +1327,10 @@
                                                       </ui:Target>
                                                     </ui:UiElementExists.Target>
                                                   </ui:UiElementExists>
-                                                  <If sap2010:Annotation.AnnotationText="Error handinling for Email Error Popup" Condition="[IsEmailError]" sap:VirtualizedContainerService.HintSize="925,1494" sap2010:WorkflowViewState.IdRef="If_1">
+                                                  <If sap2010:Annotation.AnnotationText="Error handinling for Email Error Popup" Condition="[IsEmailError]" sap:VirtualizedContainerService.HintSize="484,94" sap2010:WorkflowViewState.IdRef="If_1">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                       </scg:Dictionary>
@@ -1503,12 +1645,12 @@
                           </Sequence>
                         </If.Else>
                       </If>
-                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Import PDF workflow" sap:VirtualizedContainerService.HintSize="2316,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Import PDF.xaml">
+                      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Import PDF workflow" sap:VirtualizedContainerService.HintSize="1502,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Import PDF.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <scg:Dictionary x:TypeArguments="x:String, Argument" />
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="2316,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="1502,52" sap2010:WorkflowViewState.IdRef="CommentOut_9">
                         <ui:CommentOut.Body>
                           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="546,163" sap2010:WorkflowViewState.IdRef="Sequence_42">
                             <sap:WorkflowViewStateService.ViewState>
@@ -1547,7 +1689,7 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                       </ui:CommentOut>
-                      <ui:ExcelWriteCell Cell="[&quot;CI&quot; + xlcounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="2316,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="BACS SUBMITTED" />
+                      <ui:ExcelWriteCell Cell="[&quot;CI&quot; + xlcounter.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="1502,88" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_2" SheetName="Sheet1" Text="BACS SUBMITTED" />
                     </Sequence>
                   </Sequence>
                 </ActivityAction>
@@ -1569,11 +1711,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Sequence DisplayName="Update_Cases_in_Master_File" sap:VirtualizedContainerService.HintSize="2586,483" sap2010:WorkflowViewState.IdRef="Sequence_43">
+    <Sequence DisplayName="Update_Cases_in_Master_File and Sending Reports" sap:VirtualizedContainerService.HintSize="1772,1673" sap2010:WorkflowViewState.IdRef="Sequence_43">
       <Sequence.Variables>
         <Variable x:TypeArguments="sd:DataTable" Name="tempdt" />
         <Variable x:TypeArguments="sd:DataTable" Name="dt" />
         <Variable x:TypeArguments="x:String" Name="strDT" />
+        <Variable x:TypeArguments="x:String" Name="desktopPath" />
+        <Variable x:TypeArguments="x:String" Name="MasterExcelPath" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1581,80 +1725,16 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="E:\Taylors\Excel Comparision\comparison\Final.xlsx">
-        <ui:ReadRange.Range>
-          <InArgument x:TypeArguments="x:String">
-            <Literal x:TypeArguments="x:String" Value="" />
-          </InArgument>
-        </ui:ReadRange.Range>
-      </ui:ReadRange>
-      <ui:FilterDataTable DataTable="[dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[tempdt]" SelectColumnsMode="Keep">
-        <ui:FilterDataTable.Filters>
-          <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-            <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
-          </scg:List>
-        </ui:FilterDataTable.Filters>
-        <ui:FilterDataTable.SelectColumns>
-          <scg:List x:TypeArguments="InArgument" Capacity="64">
-            <InArgument x:TypeArguments="x:String">["Insight Ref"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Type"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["FreeHold/LeaseHold"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Client Name"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Client DOB"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["NIN number"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Client Address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["First Time Buyer"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Property address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Purchase Price"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Exchange Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Completion Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Local Authority"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Seller"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Seller address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Seller Solicitors"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Sol Address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Sol Ref"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["SDLT stamp Duty"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Individual/Company"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["STart Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["End Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Rent"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Rent Reveiew period"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Stamp Duty"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["NPV"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["FirstName"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["LastName"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["DOB"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Title Number"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Transferor"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["living in the property or renting out (Additional Residence)"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Landlord Title Number"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Landlord Name"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Landlord address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Term(Start Date)"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Term Duration"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Rent Review Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Proprietor"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Postal Address"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Postcode"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Seller 2"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Seller address 2"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Two or more property"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Country"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["DL No"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Passport No"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["NIN Number 1"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["NIN Number 2"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Primary Purchaser"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Primary Purchaser NIN"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Calculate SDLT Processing Date"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["Submit SDLT Staus"]</InArgument>
-            <InArgument x:TypeArguments="x:String">["BACS status"]</InArgument>
-          </scg:List>
-        </ui:FilterDataTable.SelectColumns>
-      </ui:FilterDataTable>
-      <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+      <ui:GetEnvironmentFolder DisplayName="Get Environment Folder" FolderPath="[desktopPath]" sap:VirtualizedContainerService.HintSize="1045,62" sap2010:WorkflowViewState.IdRef="GetEnvironmentFolder_2" SpecialFolder="Desktop" />
+      <Assign sap:VirtualizedContainerService.HintSize="1045,82" sap2010:WorkflowViewState.IdRef="Assign_16">
+        <Assign.To>
+          <OutArgument x:TypeArguments="x:String">[MasterExcelPath]</OutArgument>
+        </Assign.To>
+        <Assign.Value>
+          <InArgument x:TypeArguments="x:String">["&lt;Path&gt;\SDLT Reports\".Replace("&lt;Path&gt;",desktopPath)+"SDLT Master "+Now.ToString("MMMM-yyyy")+".xlsx"]</InArgument>
+        </Assign.Value>
+      </Assign>
+      <TryCatch DisplayName="Try Catch | Generating master excel" sap:VirtualizedContainerService.HintSize="1045,52" sap2010:WorkflowViewState.IdRef="TryCatch_3">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1662,10 +1742,119 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <TryCatch.Try>
-          <ui:AppendRange DataTable="[tempdt]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="AppendRange_2" Password="RIFLAR" SheetName="Sheet1" WorkbookPath="SDLT Master.xlsx" />
+          <Sequence DisplayName="Ammending Master excel report" sap:VirtualizedContainerService.HintSize="450,463" sap2010:WorkflowViewState.IdRef="Sequence_52">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange AddHeaders="True" DataTable="[dt]" DisplayName="Read Range | Final excel" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="E:\Taylors\Excel Comparision\comparison\Final.xlsx">
+              <ui:ReadRange.Range>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </ui:ReadRange.Range>
+            </ui:ReadRange>
+            <ui:FilterDataTable DataTable="[dt]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="388,60" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[tempdt]" SelectColumnsMode="Keep">
+              <ui:FilterDataTable.Filters>
+                <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                  <ui:FilterOperationArgument Column="{x:Null}" Operand="{x:Null}" BooleanOperator="And" Operator="LT" />
+                </scg:List>
+              </ui:FilterDataTable.Filters>
+              <ui:FilterDataTable.SelectColumns>
+                <scg:List x:TypeArguments="InArgument" Capacity="64">
+                  <InArgument x:TypeArguments="x:String">["Insight Ref"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Type"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["FreeHold/LeaseHold"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Client Name"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Client DOB"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["NIN number"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Client Address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["First Time Buyer"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Property address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Purchase Price"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Exchange Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Completion Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Local Authority"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Seller"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Seller address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Seller Solicitors"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Sol Address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Sol Ref"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["SDLT stamp Duty"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Individual/Company"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["STart Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["End Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Rent"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Rent Reveiew period"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Stamp Duty"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["NPV"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["FirstName"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["LastName"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["DOB"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Title Number"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Transferor"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["living in the property or renting out (Additional Residence)"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Landlord Title Number"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Landlord Name"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Landlord address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Term(Start Date)"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Term Duration"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Rent Review Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Proprietor"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Postal Address"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Postcode"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Seller 2"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Seller address 2"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Two or more property"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Country"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["DL No"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Passport No"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["NIN Number 1"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["NIN Number 2"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Primary Purchaser"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Primary Purchaser NIN"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Calculate SDLT Processing Date"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["Submit SDLT Staus"]</InArgument>
+                  <InArgument x:TypeArguments="x:String">["BACS status"]</InArgument>
+                </scg:List>
+              </ui:FilterDataTable.SelectColumns>
+            </ui:FilterDataTable>
+            <If sap2010:Annotation.AnnotationText="If the master excel is already there then append range else use write range to create for new month report" Condition="[File.Exists(MasterExcelPath)]" sap:VirtualizedContainerService.HintSize="388,124" sap2010:WorkflowViewState.IdRef="If_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:AppendRange DataTable="[tempdt]" DisplayName="Append Range" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="AppendRange_3" SheetName="Sheet1" WorkbookPath="[MasterExcelPath]" />
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,227" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:WriteRange AddHeaders="True" DataTable="[tempdt]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="388,116" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[MasterExcelPath]" />
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
         </TryCatch.Try>
         <TryCatch.Catches>
-          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454,21" sap2010:WorkflowViewState.IdRef="Catch`1_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1676,11 +1865,136 @@
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
               </ActivityAction.Argument>
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;Failed Amending to master excel : &quot;+exception.Message]" />
             </ActivityAction>
           </Catch>
         </TryCatch.Catches>
       </TryCatch>
-      <ui:CommentOut DisplayName="Uploading sharedrive" sap:VirtualizedContainerService.HintSize="388,52" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+      <TryCatch DisplayName="Try Catch | Sending reports" sap:VirtualizedContainerService.HintSize="1045,1154" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <TryCatch.Try>
+          <Sequence DisplayName="Sending master reports at month end" sap:VirtualizedContainerService.HintSize="1007,926" sap2010:WorkflowViewState.IdRef="Sequence_55">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="s:DateTime" Name="MonthLastDate" />
+              <Variable x:TypeArguments="s:DateTime" Name="TodayDate" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="945,130" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+              <ui:MultipleAssign.AssignOperations>
+                <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[MonthLastDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[New DateTime(Now.AddMonths(1).Year,Now.AddMonths(1).Month,1).AddDays(-1)]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="s:DateTime">[TodayDate]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="s:DateTime">[Now]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                </scg:List>
+              </ui:MultipleAssign.AssignOperations>
+            </ui:MultipleAssign>
+            <If sap2010:Annotation.AnnotationText="If todays date is the last date of current month then send email with master report attached to it. else send only todays report." Condition="[MonthLastDate.ToString(&quot;dd/MM/yyyy&quot;)=TodayDate.ToString(&quot;dd/MM/yyyy&quot;)]" sap:VirtualizedContainerService.HintSize="945,645" sap2010:WorkflowViewState.IdRef="If_8">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,454" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Sending today's final report with month end report&quot;]" />
+                  <Delay Duration="00:00:04" sap:VirtualizedContainerService.HintSize="388,25" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi team,&quot;+Environment.NewLine+Environment.NewLine+&quot;Please find the attached SDLT final report with Month end report.&quot;+Environment.NewLine+Environment.NewLine+&quot;Thanks&quot;+Environment.NewLine+&quot;Anza Bot&quot;]" Cc="biswajeetkumar@anzaservicesllp.com" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_3" IsBodyHtml="False" IsDraft="False" Subject="SDLT Emailing BACS Completed" To="abhisheklatthe@anzaservicesllp.com;pmo@anzaservicesllp.com">
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">
+                          <Literal x:TypeArguments="x:String">E:\Taylors\Excel Comparision\comparison\Final.xlsx</Literal>
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MasterExcelPath" />
+                        </InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="450,389" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Sending today's final report&quot;]" />
+                  <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi team,&quot;+Environment.NewLine+Environment.NewLine+&quot;Please find the attached SDLT final report&quot;+Environment.NewLine+Environment.NewLine+&quot;Thanks&quot;+Environment.NewLine+&quot;Anza Bot&quot;]" Cc="biswajeetkumar@anzaservicesllp.com" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_4" IsBodyHtml="False" IsDraft="False" Subject="SDLT Emailing BACS Completed" To="abhisheklatthe@anzaservicesllp.com;pmo@anzaservicesllp.com">
+                    <ui:SendOutlookMail.Files>
+                      <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                        <InArgument x:TypeArguments="x:String">E:\Taylors\Excel Comparision\comparison\Final.xlsx</InArgument>
+                      </scg:List>
+                    </ui:SendOutlookMail.Files>
+                  </ui:SendOutlookMail>
+                </Sequence>
+              </If.Else>
+            </If>
+          </Sequence>
+        </TryCatch.Try>
+        <TryCatch.Catches>
+          <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="1011,21" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ActivityAction x:TypeArguments="s:Exception">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Sending email with today report" sap:VirtualizedContainerService.HintSize="450,389" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Sending reports failed with Date logic: &quot;+exception.Message]" />
+                <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi team,&quot;+Environment.NewLine+Environment.NewLine+&quot;Please find the attached SDLT final report&quot;+Environment.NewLine+Environment.NewLine+&quot;Thanks&quot;+Environment.NewLine+&quot;Anza Bot&quot;]" Cc="biswajeetkumar@anzaservicesllp.com" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="388,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_2" IsBodyHtml="False" IsDraft="False" Subject="SDLT Emailing BACS Completed" To="abhisheklatthe@anzaservicesllp.com;pmo@anzaservicesllp.com">
+                  <ui:SendOutlookMail.Files>
+                    <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
+                      <InArgument x:TypeArguments="x:String">E:\Taylors\Excel Comparision\comparison\Final.xlsx</InArgument>
+                    </scg:List>
+                  </ui:SendOutlookMail.Files>
+                </ui:SendOutlookMail>
+              </Sequence>
+            </ActivityAction>
+          </Catch>
+        </TryCatch.Catches>
+      </TryCatch>
+      <ui:CommentOut DisplayName="Uploading sharedrive" sap:VirtualizedContainerService.HintSize="1045,52" sap2010:WorkflowViewState.IdRef="CommentOut_11">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,224" sap2010:WorkflowViewState.IdRef="Sequence_45">
             <sap:WorkflowViewStateService.ViewState>
