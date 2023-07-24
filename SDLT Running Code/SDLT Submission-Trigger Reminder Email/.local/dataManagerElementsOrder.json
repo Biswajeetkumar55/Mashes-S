@@ -1,0 +1,66 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "Diff&Sequence_1",
+        "date1&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Read Master File.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "InFileName&Sequence_1",
+        "StrCompDate&Sequence_1",
+        "dt&Sequence_1",
+        "filterdt&Sequence_1",
+        "data_to_del&Sequence_1",
+        "op&Sequence_1",
+        "masterdt&Sequence_1",
+        "newdt&Sequence_1",
+        "CompletionDate&Sequence_3",
+        "Counter&Sequence_3",
+        "CaseNumber&Sequence_2",
+        "CurrentDate&Sequence_2",
+        "CalculatedCompDate&Sequence_2",
+        "StrCurrentDate&Sequence_2",
+        "DtCdate&Sequence_2",
+        "IsSDLTsubmitted&Sequence_2",
+        "DateDiff&Sequence_5",
+        "StrDateDiff&Sequence_5",
+        "newdt&Sequence_12"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "To_Email",
+        "CC_Email"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "try.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "master&Sequence_1",
+        "rows&Sequence_1",
+        "outputdt&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 {
   "name": "SDLT Submission-Trigger Reminder Email",
+  "projectId": "3ea1382f-74d8-409c-b7db-4a179a7b735a",
   "description": "SDLT Submission-Trigger Reminder Email - If Completion date cross 7 days or more",
   "main": "Main.xaml",
   "dependencies": {
@@ -16,16 +17,21 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",

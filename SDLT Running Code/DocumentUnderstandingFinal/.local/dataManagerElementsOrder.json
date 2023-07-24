@@ -1,0 +1,108 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "finaldt&Sequence_1",
+        "folderpath&Sequence_1",
+        "extracteddt&Sequence_1",
+        "dt&Sequence_1",
+        "documents_for_extraction&Sequence_1",
+        "document_case_number&Sequence_1",
+        "mergeddt&Sequence_1",
+        "outputexceldt&Sequence_1",
+        "IsExtractedExcelExist&Sequence_1",
+        "IsOutputExist&Sequence_1",
+        "IsFinalExtractedExist&Sequence_1",
+        "Counter&Sequence_1",
+        "count&Sequence_1",
+        "filepath&Sequence_2",
+        "outdt&Sequence_2",
+        "deletepathfile&Sequence_5",
+        "is_document_understanding&Sequence_3",
+        "variable1&Sequence_3",
+        "row&Sequence_22",
+        "Nextrow&Sequence_22"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "In_ExtractedExcelPath",
+        "In_MergeOutputExcelPath",
+        "In_FinalExtractedFilePath",
+        "In_DocumentFolderPath",
+        "INOut_CMLRegEx",
+        "INOUT_StatementRegEx"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Delete _files.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "folders&Sequence_2",
+        "files&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "folder_path"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "pdfdocumentconversion.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "file&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "docs",
+        "out_docpath",
+        "out_doc_caseno",
+        "in_caseno"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "DocumentUnderstanding.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "listdoctext&Sequence_1",
+        "listextractedresult&Sequence_1",
+        "listvalidateresult&Sequence_1",
+        "listdom&Sequence_1",
+        "num&Sequence_1",
+        "taxonomy&Sequence_1",
+        "listclassificationresult&Sequence_1",
+        "outputDataset&Sequence_1",
+        "dt&Sequence_1",
+        "DOM&Sequence_1",
+        "IfError&Sequence_1",
+        "doctext&Sequence_1",
+        "ValidatedclassificationResult&Sequence_1",
+        "IsErrorinPresentValidation&Sequence_1",
+        "classificationResult&Sequence_2",
+        "extractionResult&Sequence_2",
+        "validateResult&Sequence_3",
+        "DT_caseno&Sequence_3"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_doc_path",
+        "out_dt",
+        "in_dt",
+        "in_case_no"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

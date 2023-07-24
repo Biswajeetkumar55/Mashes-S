@@ -1,5 +1,6 @@
 {
   "name": "Taylors Emailing BACS",
+  "projectId": "5605bafe-fd1a-4b7f-8a5b-ce1dbea1d0e6",
   "description": "Generate SDLT Payment form and add Reference number to send the BACS to onshore",
   "main": "Main.xaml",
   "dependencies": {
@@ -16,16 +17,21 @@
   "projectVersion": "1.0.0",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false,
+    "pipType": "ChildSession"
   },
   "designOptions": {
     "projectProfile": "Developement",
