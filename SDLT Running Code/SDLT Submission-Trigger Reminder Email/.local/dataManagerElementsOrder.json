@@ -23,6 +23,9 @@
       "Path": "Read Master File.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": [
+        "desktopPath&Sequence_1",
+        "MonthLastDate&Sequence_1",
+        "TodayDate&Sequence_1",
         "InFileName&Sequence_1",
         "StrCompDate&Sequence_1",
         "dt&Sequence_1",

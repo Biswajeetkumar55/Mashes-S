@@ -55,7 +55,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>664,536</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,536</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Read_Final_Extracted_Excel_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="64">
@@ -1472,7 +1472,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi Team,&quot; + Environment.NewLine+&quot;PFA SDLT Final Submission Report for your review.&quot; +Environment.NewLine +&quot;Please note we need to submit SDLT manaully the if the excel coloumn SDLT Submission status is Saved or Failed&quot;]" Cc="pmo@anzaservicesllp.com;saif1@taylorslegal.com;syedabrar@anzaservicesllp.com" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="SDLT Final Submission report" To="sivapurnesh@anzaservicesllp.com;maheshs@anzaservicesllp.com">
+    <ui:SendOutlookMail Account="{x:Null}" Bcc="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" TimeoutMS="{x:Null}" Body="[&quot;Hi Team,&quot; + Environment.NewLine+&quot;PFA SDLT Final Submission Report for your review.&quot; +Environment.NewLine +&quot;Please note we need to submit SDLT manaully the if the excel coloumn SDLT Submission status is Saved or Failed&quot;]" Cc="pmo@anzaservicesllp.com;saif1@taylorslegal.com;syedabrar@anzaservicesllp.com" DisplayName="Send Outlook Mail Message" sap:VirtualizedContainerService.HintSize="434,146" sap2010:WorkflowViewState.IdRef="SendOutlookMail_1" Importance="Normal" IsBodyHtml="False" IsDraft="False" Sensitivity="Normal" Subject="SDLT Final Submission report" To="sivapurnesh@anzaservicesllp.com;biswajeetkumar@anzaservicesllp.com">
       <ui:SendOutlookMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
           <InArgument x:TypeArguments="x:String">E:\Taylors\Excel Comparision\comparison\Final.xlsx</InArgument>

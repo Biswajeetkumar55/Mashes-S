@@ -1,0 +1,40 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "vpn&Sequence_25",
+        "PWD&Sequence_25",
+        "Connect_disconnect&Sequence_25",
+        "FinalDt&Sequence_19",
+        "Counter&Sequence_19",
+        "CompletionDate&Sequence_18",
+        "CurrentDate&Sequence_18",
+        "DtCdate&Sequence_18",
+        "CalculatedCompDate&Sequence_18",
+        "StrCompDate&Sequence_18",
+        "StrCurrentDate&Sequence_18",
+        "BACSStatus&Sequence_18",
+        "document_window_exist&Sequence_14",
+        "document_exist&Sequence_17",
+        "DateDiff&Sequence_16",
+        "StrDateDiff&Sequence_16"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "Out_CaseNumber",
+        "Out_Doc_SDLTAmt"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}
